@@ -1,45 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tik tok</title>
+    <title>miu miu</title>
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <a href = "/">tik tok</a>
-        <nav>
-            <ul>
-                <li><a href = "index.html">главная</a></li>
-                <li><a href = "about.html"> о нас</a></li>
-                <li><a href = "contacts.html"> контакты</a></li>
+    <header class="header">
+        <a class="header__logo" href="/">miu miu</a>
+        <nav class="nav">
+            <ul class="nav__menu">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">О бренде</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
+
         </nav>
     </header>
     <main>
-        <h1>добро пожаловать на наш сайт</h1>
-        <section id = "services">
-            <h2>наши услуги</h2>
-            <p>описание предоставляемях услуг</p>
-            <a href = "#contacts">связаться с нами</a>
+        <!-- <h1>добро пожаловать на наш сайт</h1> -->
+        <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_logo.png" alt="Логотип"
+            class='cropped-img1'>
+        <section id="services">
+            <h2>О бренде</h2>
+            <p>Miu Miu — это самостоятельная и яркая глава в истории моды, созданная Миуччей Прада как творческая
+                лаборатория для смелых идей. Бренд воплощает дух авангарда и беззаботности, предлагая альтернативу
+                строгой элегантности Prada.
+
+                Его ДНК — это неожиданные сочетания тканей, игривые силуэты, яркие цвета и уникальные принты. Miu Miu
+                обращается к современной, уверенной в себе женщине, которая не боится экспериментировать и выражать свою
+                индивидуальность через моду. Бренд представляет полные коллекции одежды, обуви, сумок, аксессуаров и
+                очков.</p>
+            <a href="#contacts">Связаться с нами</a>
+        </section>
+        <div class="media">
+            <iframe src="https://rutube.ru/play/embed/17f3eee9ce7a2a60879b9998c62e5a98" title="Видео о проекте">
+                allow="autoplay; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <section id="portfolio">
+            <h2>В наличии</h2>
+            <p>
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag1.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag2.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag3.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag4.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag5.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag6.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag7.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag8.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag9.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag10.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag11.jpg" alt="сумка"
+                    class="product">
+                <img src="C:\Users\Admin\OneDrive\Документы\my_project\assets\img\img_bag12.jpg" alt="сумка"
+                    class="product">
+            </p>
         </section>
 
-        <section id = "portfolio">
-            <h2>портфолио</h2>
-            <p>примеры наших работ</p>
-        </section>
-
-        <section id = "contacts">
-            <h2>контактная информация</h2>
-            <p>наши контакты</p>
-            <a href = "contacts.html">подробнее</a>
+        <section id="contacts">
+            <h2>Контактная информация</h2>
+            <p>Наши контакты</p>
+            <a href="contacts.html">Подробнее</a>
         </section>
     </main>
 
+
+    <button id="openDialog" type="button">Написать нам</button>
+
+    <dialog id="contactDialog" aria-labelledby="dialogTitle">
+        <h2 id="dialogTitle">Обратная связь</h2>
+        <form id="contactForm" method="dialog" novalidate>
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="phoneHelp"
+                placeholder="+7 (___) ___-__-__" required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+            <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+            <label for="date">Дата</label>
+            <input id="date" name="date" type="date">
+            <label for="topic">Тема</label>
+            <select id="topic" name="topic" required>
+                <option value="">Выберите тему</option>
+                <option>Вопрос</option>
+                <option>Заказ</option>
+            </select>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="form-actions">
+                <button type="button" id="closeDialog">Закрыть</button>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </dialog>
+
     <footer>
-        <p>&copy; 2023 Tik Tok. Все права защищены.</p>
+        <p>&copy;Все права защищены 2025, Miu Miu</p>
         <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>
+
+
 </html>
